@@ -22,11 +22,7 @@ public class ResponseHandler {
         Map<String, Object> response= new HashMap<String, Object>();
         response.put("from", assetId);
         for ( Currency currency: currencies) {
-            response.put("Name", currency.getName());
-            response.put("Rate", currency.getRate());
-            response.put("Amount", currency.getAmount());
-            response.put("Fee", Currency.getFee());
-            response.put("Result", currency.getResult());
+            response.put(currency.getName(), currency);
         }
         return new ResponseEntity<Object>(response, status);
     }
