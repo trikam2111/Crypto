@@ -11,19 +11,19 @@ import java.util.Map;
 
 public class ResponseHandler {
     public static ResponseEntity<Object> getRates(HttpStatus status, Exchange_rate[] rates) {
-        Map<String, Object> response= new HashMap<String, Object>();
+        Map<String, Object> response= new HashMap<>();
         response.put("source", rates[0].get_asset_id_base());
         for ( Exchange_rate rate: rates) {
             response.put(rate.get_asset_id_quote(), rate.get_rate());
         }
-        return new ResponseEntity<Object>(response, status);
+        return new ResponseEntity<>(response, status);
     }
     public static ResponseEntity<Object> getExchangeRates(HttpStatus status, String assetId, List<Currency> currencies) {
-        Map<String, Object> response= new HashMap<String, Object>();
+        Map<String, Object> response= new HashMap<>();
         response.put("from", assetId);
         for ( Currency currency: currencies) {
             response.put(currency.getName(), currency);
         }
-        return new ResponseEntity<Object>(response, status);
+        return new ResponseEntity<>(response, status);
     }
 }

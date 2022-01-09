@@ -42,7 +42,5 @@ public class Currency {
         return result;
     }
 
-    public static Double getFee() {
-        return fee;
-    }
+    public static Double getFee() { return fee; }
 }
