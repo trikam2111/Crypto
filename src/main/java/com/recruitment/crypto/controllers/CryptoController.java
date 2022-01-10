@@ -1,7 +1,6 @@
 package com.recruitment.crypto.controllers;
 
 
-import com.recruitment.crypto.CryptoApplication;
 import com.recruitment.crypto.Handlers.ResponseHandler;
 import com.recruitment.crypto.model.Currency;
 import com.recruitment.crypto.properties.PropertyReader;
@@ -9,8 +8,6 @@ import io.coinapi.rest.Exchange_rate;
 import io.coinapi.rest.REST_methods;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +15,6 @@ import org.springframework.web.context.request.WebRequest;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @RestController
