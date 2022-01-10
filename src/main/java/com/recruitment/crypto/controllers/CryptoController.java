@@ -43,6 +43,10 @@ public class CryptoController {
             try{
                 rates = coinApiRest.get_all_exchange_rates(currency);
                 if(rates.length == 0) { throw new NullPointerException();}
+                /*
+                *TODO:
+                * Currently there is a problem with this section, fix after implementing threads and test.
+                */
             } catch (IOException exception){
                 exceptionHandler.handleIOException(exception, request);
             } catch (NullPointerException exception) {
