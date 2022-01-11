@@ -11,7 +11,7 @@ public class Currency {
         this.name = name;
         this.rate = rate;
         this.amount = amount;
-        result = this.amount / (this.rate + this.rate * fee);
+        result = this.amount * (this.rate - this.rate * fee);
     }
 
     public String getName() {
